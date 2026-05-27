@@ -20,6 +20,11 @@ pipeline {
             steps {
                 sh 'make clean'
             }
+       }
+	stage('error'){
+	    steps {
+		sh 'abbcc'
+		}
         }
     }
 }
