@@ -23,7 +23,7 @@ pipeline {
        }
 	stage('error'){
 	    steps {
-		sh 'abbcc'
+		sh 'exit 1'
 		}
         }
     }
