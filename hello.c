@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-printf("hello jenkins");
-printf("gitHub integration with jenkins");
+printf("hello jenkins\n");
+printf("gitHub integration with jenkins\n");
 return 0;
 }
