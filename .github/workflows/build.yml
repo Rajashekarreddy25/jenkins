@@ -1,0 +1,32 @@
+name: C Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Build using Makefile
+        run: make
+
+      - name: Execute program
+        run: ./app
+
+      - name: Create artifact directory
+        run: mkdir -p artifact
+
+      - name: Copy executable to artifact
+        run: cp app artifact/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: c-application
+          path: artifact/
